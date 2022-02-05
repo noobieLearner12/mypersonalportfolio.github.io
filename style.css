@@ -1,0 +1,437 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Supermercado One', cursive; */
+  /* font-family: 'Josefin Sans', sans-serif */
+      /* font-family: 'Exo 2', sans-serif; */
+      /* font-family: 'Source Code Pro', monospace; */
+      /* font-family: 'Neonderthaw', cursive; */
+      /* font-family: 'Source Code Pro', monospace; */
+}
+
+:root {
+    --primary: #3dcfd3;
+    --dark: #21201e;
+    --black: #181818;
+    --pure: #ffffff;
+    --ternary: #353434;
+    --light: #f2f2f2;
+  }
+body{
+    background: linear-gradient(215deg, rgba(35, 239, 202, 0.795 ), rgba(  255 ,232, 232,1) );
+
+}
+/* For Smooth Scrolling  */
+html{
+    scroll-behavior: smooth;
+}
+/* Small Section  */
+.small-section{
+    width: 1200px;
+    margin: auto;
+}
+/* #main-section{
+    /* height: 100vh; */
+    /* background: linear-gradient(215deg, rgba(255 ,232, 232,1), rgba(35, 239, 202, 0.795) 100%); */
+/* } */ */
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+
+/* About -Section */
+#about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 4rem;
+}
+.primary-heading{
+    flex: 1;
+    }
+
+.primary-heading h2{
+    font-size: 4rem;
+    font-family: "Poppins", sans-serif;
+}
+.primary-heading p{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+     color: rgb(0, 17, 255);
+     font-family: "Acme", sans-serif;
+}
+.primary-heading span{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color:var(--ternary) ;
+    font-family: 'Josefin Sans', sans-serif;
+    display: block;
+  
+}
+
+.main-image{
+    flex:1
+}
+.main-image img{
+    height: 88vh;
+    margin-left: 3rem;
+    }
+#btn{
+ width: 140px;   
+ height: 50px;
+ margin-top: 1rem;
+ padding: 5px;
+ font-size: 1rem;
+font-family: "Acme", sans-serif;
+border: 1px solid transparent;
+background-color:var(--primary);
+border-radius: 20px;
+font-weight: 500;
+transition: 0.4s ;
+}
+
+#btn:hover{
+    background-color: rgb(33, 3, 68);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* -----For navigation--- */
+@media only screen and (max-width: 768px) {
+
+.navigation img{
+    justify-content: center;
+    width: 40px;
+    margin-left: 20px;
+}
+.navigation #btn{
+   display: none;
+}
+.primary-heading h2{
+    font-size: 2rem;
+}
+.primary-heading p{
+    font-size: 1rem;
+}
+.primary-heading span{
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+}
+.main-image img{
+    height: 48vh;
+}
+#btn{
+    width: 100px;   
+    height: 30px;
+    margin-top: 7px;
+    padding: 5px;
+    font-size: 0.7rem;
+}
+  }
+
+
+/* Project Section  */
+
+
+.secondary-heading{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    font-family: "Poppins", sans-serif;
+}
+.secondary-heading span{
+    font-weight: bold;
+    color: rgb(255, 51, 0);
+}
+
+.project{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+   place-items: center;
+   
+}
+.project img{
+    width: 390px;
+    height: 200px;
+    box-shadow:-1px 1px 13px rgba(15, 15, 15, 0.589);
+    transition: 0.4s all;
+    border-radius: 20px;
+}
+.project-1 img:hover{
+    /* border: 2px solid black; */
+    transform: scale(1.05);
+}
+
+
+.project-1 h2{
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+ .hover-info a{
+    padding: 10px 9px;
+    text-decoration: none;
+    background-color: yellow;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 1rem;
+    border-radius: 5px;  
+    transition: 0.4s all;
+}
+.hover-info a:hover{
+    background-color: var(--primary);
+}
+
+.hover-info{
+
+    margin-bottom: 1.2rem;
+    width: 100%;
+}
+
+/* Responsive of Project Section   */
+@media only screen and (max-width: 768px) {
+    .small-section{
+        width: 600px;
+    }
+.secondary-heading{
+    font-size: 1rem;
+}
+.project{
+  grid-template-columns: repeat(2, 1fr); 
+}
+
+.project img{
+    width: 200px;
+    height: 100px;
+    box-shadow:-1px 1px 13px rgba(15, 15, 15, 0.589);
+    transition: 0.4s all;
+    border-radius: 20px;
+}
+.hover-info a{
+    padding: 5px 5px;
+    font-size: 0.5rem;
+    /* margin-bottom: 0.5rem; */
+}
+.project-1 h2{
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    /* margin-left: -6rem; */
+}
+}
+
+
+
+  /* ---tools Section-- */
+  .tools{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.1rem;
+    grid-row-gap: 1.5rem;
+    place-items: center;
+      
+  }
+.tools img{
+    width: 50%;
+}
+
+/* Responsive for Tools  */
+
+@media only screen and (max-width: 768px) {
+.tools{
+    grid-template-columns: repeat(2, 1fr); 
+}
+
+}
+
+/* ----contact-section--- */
+.social-links{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#contact-form{
+    /* border: 10px solid rgb(255, 0, 0); */
+    width: 800px;
+    margin:auto;
+    border-radius: 19px;
+   
+}
+.contact .social-links a {
+    color: rgb(140, 0, 255);
+    padding: 0 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
+   
+}
+.social-links{
+    width: 100%;
+    margin: auto;
+}
+
+
+.center-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.center-items h2{
+    font-size: 2rem;
+    margin: -1rem;
+    border-bottom: 4px solid rgb(19, 5, 71);
+    border-radius: 8px;
+}
+.contact-items input{
+    display: block;
+    font-family:  "Poppins", sans-serif;
+    
+}
+.contact-items .name{
+    margin-bottom: 1rem;
+    width: 400px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid rgb(25, 0, 253);
+    border-radius: 8px;
+}
+.contact-items .address{
+    margin-bottom: 1rem;
+    width: 400px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid rgb(25, 0, 253);
+    border-radius: 8px;
+}
+.contact-items .email{
+    margin-bottom: 1rem;
+    width: 400px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid rgb(25, 0, 253);
+    border-radius: 8px;
+}
+.contact-items .message{
+    margin-bottom: 1rem;
+    width: 400px;
+    height: 100px;
+    border: 1px solid rgb(25, 0, 253);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    padding: 8px;
+    font-family:  "Poppins", sans-serif;
+    
+} 
+#submit-btn{
+    margin: auto;
+    padding: 8px 20px;
+    height: 40px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    background-color: var(--primary);
+    border: transparent;
+    border-radius: 13px;
+    transition: 0.4s ease-in-out;
+}
+
+#submit-btn:hover{
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+
+}
+
+@media only screen and (max-width: 768px) {
+
+        #contact-form{
+            width: 400px;
+          }
+          .center-items h2{
+              font-size: 1rem;
+          }
+          .contact-items .name{
+              width: 200px;
+          }  .contact-items .message{
+              width: 200px;
+          }  .contact-items .email{
+              width: 200px;
+          }  .contact-items .address{
+              width: 200px;
+          }
+          #submit-btn{
+            padding: 5px 15px;
+        
+          }
+    }
+
+/* ----footer-section ---   */
+
+
+#footer-section{
+    background-color: black;
+    height: 90px;
+   
+}
+#footer-section .footer-row{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.footer_social{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+  
+   height: 90px;
+}
+
+.footer-one{
+flex: 1;
+}
+.footer-one .footer_social a{
+    color: white;
+    font-size: 50px;
+    padding: 10px;
+
+}
+.footer-two{
+    flex: 1;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+.footer-two h1{
+margin-left: 4rem;
+}
+.footer-row{
+    background-color: black;
+}
+
+
+/* ------For Responsive Design--- */
+@media only screen and (max-width: 768px) {
+    .footer-one .footer_social a{
+        color: rgb(252, 252, 252);
+        font-size: 20px;
+        padding: 10px;
+    
+    }
+    .footer-two h1{
+        margin-left: 1rem;
+        color: rgb(255, 255, 255);
+        font-size: 1rem;
+        }
+
+
+}
